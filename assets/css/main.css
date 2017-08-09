@@ -1304,7 +1304,7 @@
 		cursor: pointer;
 		border: 0;
 		border-radius: 5px;
-		background: #d52349;
+		background: #E8A21C;
 		color: #fff !important;
 		font-weight: 700;
 		outline: 0;
@@ -1319,7 +1319,7 @@
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background: #e53359;
+			background: #FDB52B;
 		}
 
 		input[type="button"]:active,
@@ -1611,7 +1611,7 @@
 		.icon.featured {
 			position: relative;
 			display: inline-block;
-			background-color: #d52349;
+			background-color: #E8A21C;
 			width: 9em;
 			padding: 1.75em 0 0.75em 0;
 			border-top-left-radius: 5px;
@@ -1631,7 +1631,7 @@
 				position: absolute;
 				bottom: -1.95em;
 				left: 0;
-				border-top: solid 2em #d52349;
+				border-top: solid 2em #E8A21C;
 				border-left: solid 4.5em transparent;
 				border-right: solid 4.5em transparent;
 			}
@@ -1673,7 +1673,7 @@
 			}
 
 			#banner header p {
-				color: #d52349;
+				color: #E8A21C;
 				padding: 0;
 				font-style: normal;
 				margin: 0;
@@ -1949,7 +1949,7 @@
 					}
 
 					#nav > ul > li.current > a {
-						background: #d52349;
+						background: #E8A21C;
 						color: #fff !important;
 						font-weight: 700;
 					}
