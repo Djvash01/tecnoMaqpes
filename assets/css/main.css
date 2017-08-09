@@ -1412,7 +1412,7 @@
 	ul.contact li {
 		position: relative;
 		border-top: solid 1px #ddd;
-		padding: 1.3em 0 1.3em 7em;
+		padding: 1em 0 1em 7em;
 	}
 
 		ul.contact li h3 {
@@ -1890,7 +1890,7 @@
 			}
 
 			#footer-wrapper {
-				padding: 4em 0 4em 0;
+				padding: 6em 0 4em 0;
 			}
 
 				#footer-wrapper header {
@@ -1899,6 +1899,7 @@
 
 					#footer-wrapper header h2 {
 						font-size: 1.75em;
+
 					}
 
 		/* Header */
