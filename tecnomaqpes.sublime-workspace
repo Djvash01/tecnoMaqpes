@@ -1,0 +1,228 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"b",
+				"bottom"
+			],
+			[
+				"tit",
+				"title-footer"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"mar",
+				"margin-top"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 150.0,
+		"last_filter": "Package Control: ins",
+		"selected_items":
+		[
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/wamp64/www/tecnomaqpes",
+		"/C/wamp64/www/tecnomaqpes/assets",
+		"/C/wamp64/www/tecnomaqpes/images"
+	],
+	"file_history":
+	[
+		"/C/Users/Andrés/Desktop/tecnomaqpes/assets/css/main.css",
+		"/C/Users/Andrés/Desktop/tecnomaqpes/productos.html",
+		"/C/Users/Andrés/Desktop/tecnomaqpes/index.html",
+		"/C/Users/Andrés/Desktop/tecnomaqpes/assets/css/ie8.css",
+		"/D/bookmarks-04-02-2017.html",
+		"/C/Users/Andrés/Desktop/ejemplo/mimocar/src/app/app.component.ts",
+		"/C/Users/Andrés/Desktop/ejemplo/mimocar/src/app/app.component.html",
+		"/C/Users/Andrés/Desktop/ejemplo/mimocar/package.json",
+		"/C/Users/Andrés/Desktop/ejemplo/mimocar/src/app/app.component.spec.ts",
+		"/C/Users/Andrés/Desktop/ejemplo/mimocar/src/app/app.module.ts",
+		"/C/Users/Andrés/Desktop/mimocar/src/app/app.component.js",
+		"/C/Users/Andrés/Desktop/mimocar/app/app.component.js",
+		"/C/Users/Andrés/Desktop/mimocar/index.html",
+		"/C/Users/Andrés/Desktop/mimocar/styles.css",
+		"/C/Users/Andrés/Desktop/mimocar/package.json",
+		"/C/Users/Andrés/Desktop/mimocar/bs-config.json",
+		"/C/Users/Andrés/Desktop/mimocar/node_modules/wtf-8/wtf-8.js",
+		"/C/Users/Andrés/Downloads/mandala_local/usuario.html",
+		"/C/Users/Andrés/Downloads/quickstart-master/src/app/app.component.spec.ts",
+		"/C/Users/Andrés/Downloads/quickstart-master/src/index.html",
+		"/C/Users/Andrés/Downloads/mails/invitacion.html",
+		"/C/Users/Andrés/Downloads/mails/invitacion.blade.php",
+		"/C/Users/Andrés/Downloads/mails/contacto.html",
+		"/C/Users/Andrés/Downloads/mails/inscripcion.html",
+		"/C/Users/Andrés/Downloads/mails/inscripcion.blade.php",
+		"/C/Users/Andrés/Downloads/mails/contacto.blade.php",
+		"/C/Users/Andrés/Downloads/mails/mail.html",
+		"/C/Users/Andrés/Downloads/mandala_local/sass/utilities/variables.sass",
+		"/C/Users/Andrés/Desktop/Nuevo documento de texto.txt"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			".button",
+			"#banner",
+			"nav",
+			"footer",
+			"h2"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "tecnomaqpes.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 258.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
