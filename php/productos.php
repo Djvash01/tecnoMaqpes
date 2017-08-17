@@ -1,3 +1,25 @@
+<?php
+
+include_once "conexion.php";
+
+$conexion = Conexion::getInstance();
+
+$idCategoria = $_GET["categoria"];
+
+$categoria = $conexion->get_data("SELECT * FROM categorias WHERE id = $idCategoria");
+$dataCategoria = array_values($categoria)[2];
+
+$productos = $conexion->get_data("SELECT * FROM productos WHERE categoria = $idCategoria");
+$dataProductos = array_values($productos)[2];
+
+$nombreCategoria = current($dataCategoria)["nombre"];
+
+//var_dump($categoria);
+//var_dump($dataProductos);
+
+
+?>
+
 <!DOCTYPE HTML>
 <!--
 	Dopetrope by HTML5 UP
@@ -10,8 +32,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link href=images/favicon.png rel="shortcut icon" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link href="../images/favicon.png" rel="shortcut icon" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
 	<body class="homepage">
@@ -22,13 +44,13 @@
 					<div id="header">
 
 						<!-- Logo -->
-							<h1><a href="index.html"><img src="images/logo2.png" alt="" /></a></h1>
+							<h1><a href="../index.html"><img src="../images/logo2.png" alt="" /></a></h1>
 
 						<!-- Nav -->
 							<nav id="nav">
 								<ul>
-									<li><a href="index.html">INICIO</a></li>
-									<li><a href="quienessomos.html">QUIENES SOMOS</a></li>
+									<li><a href="../index.html">INICIO</a></li>
+									<li><a href="../quienessomos.html">QUIENES SOMOS</a></li>
 									<li class="current"><a href="#">PRODUCTOS</a>
 										<ul>
 											<li><a href="#">+ Hidraulicos</a>
@@ -47,8 +69,8 @@
 											<li><a href="#">Aire acondicionado</a></li>
 										</ul>
 									</li>
-									<li><a href="servicios.html">SERVICIOS</a></li>
-									<li><a href="pedidos.html">PEDIDOS</a></li>
+									<li><a href="../servicios.html">SERVICIOS</a></li>
+									<li><a href="../pedidos.html">PEDIDOS</a></li>
 								</ul>
 							</nav>
 						
@@ -64,7 +86,7 @@
 								<header>
 									<h3>
 										<?php
-											echo $_GET["categoria"];
+											echo $nombreCategoria;
 										?>
 									</h3>
 								</header>
@@ -76,9 +98,37 @@
 								<!-- Portfolio -->
 									<section>
 										<div class="row">
-											<div class="4u 12u(mobile)">
+										<?php
+									      for($i=0; $i<count($dataProductos); $i++)
+									      {
+									      	 $producto = array_values($dataProductos)[$i];
+									      	 $nombreImagen = $producto["ruta_imagen"];
+									      	 $nombreProducto = $producto["nombre"];
+									      	 $descripcion = $producto["descripcion"];
+
+								      		//saco el valor de cada elemento
+										    //var_dump($producto);
+									      	 ?>
+									      	 <div class="4u 12u(mobile)">
 												<section class="box">
-													<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+													<a href="#" class="image featured"><img src="../images/productos/<?php echo $nombreImagen; ?>" alt="" /></a>
+													<header>
+														<h3><?php echo $nombreProducto; ?></h3>
+													</header>
+													<p><?php echo $descripcion; ?></p>
+													<footer>
+														<a href="#" class="button alt">Find out more</a>
+													</footer>
+												</section>
+											</div>
+
+											<?php
+									      }
+										?>
+
+											<!--<div class="4u 12u(mobile)">
+												<section class="box">
+													<a href="#" class="image featured"><img src="../images/pic02.jpg" alt="" /></a>
 													<header>
 														<h3>Ipsum feugiat et dolor</h3>
 													</header>
@@ -90,7 +140,7 @@
 											</div>
 											<div class="4u 12u(mobile)">
 												<section class="box">
-													<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+													<a href="#" class="image featured"><img src="../images/pic03.jpg" alt="" /></a>
 													<header>
 														<h3>Sed etiam lorem nulla</h3>
 													</header>
@@ -102,7 +152,7 @@
 											</div>
 											<div class="4u 12u(mobile)">
 												<section class="box">
-													<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
+													<a href="#" class="image featured"><img src="../images/pic04.jpg" alt="" /></a>
 													<header>
 														<h3>Consequat et tempus</h3>
 													</header>
@@ -111,12 +161,12 @@
 														<a href="#" class="button alt">Find out more</a>
 													</footer>
 												</section>
-											</div>
+											</div>-->
 										</div>
 										<div class="row">
 											<div class="4u 12u(mobile)">
 												<section class="box">
-													<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
+													<a href="#" class="image featured"><img src="../images/pic05.jpg" alt="" /></a>
 													<header>
 														<h3>Blandit sed adipiscing</h3>
 													</header>
@@ -128,7 +178,7 @@
 											</div>
 											<div class="4u 12u(mobile)">
 												<section class="box">
-													<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
+													<a href="#" class="image featured"><img src="../images/pic06.jpg" alt="" /></a>
 													<header>
 														<h3>Etiam nisl consequat</h3>
 													</header>
@@ -140,7 +190,7 @@
 											</div>
 											<div class="4u 12u(mobile)">
 												<section class="box">
-													<a href="#" class="image featured"><img src="images/pic07.jpg" alt="" /></a>
+													<a href="#" class="image featured"><img src="../images/pic07.jpg" alt="" /></a>
 													<header>
 														<h3>Dolore nisl feugiat</h3>
 													</header>
