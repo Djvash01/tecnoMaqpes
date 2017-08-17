@@ -116,9 +116,9 @@ $nombreCategoria = current($dataCategoria)["nombre"];
 														<h3><?php echo $nombreProducto; ?></h3>
 													</header>
 													<p><?php echo $descripcion; ?></p>
-													<footer>
+													<!--<footer>
 														<a href="#" class="button alt">Find out more</a>
-													</footer>
+													</footer>-->
 												</section>
 											</div>
 
@@ -171,9 +171,9 @@ $nombreCategoria = current($dataCategoria)["nombre"];
 														<h3>Blandit sed adipiscing</h3>
 													</header>
 													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
+													<!--<footer>
 														<a href="#" class="button alt">Find out more</a>
-													</footer>
+													</footer>-->
 												</section>
 											</div>
 											<div class="4u 12u(mobile)">
@@ -183,9 +183,9 @@ $nombreCategoria = current($dataCategoria)["nombre"];
 														<h3>Etiam nisl consequat</h3>
 													</header>
 													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
+													<!--<footer>
 														<a href="#" class="button alt">Find out more</a>
-													</footer>
+													</footer>-->
 												</section>
 											</div>
 											<div class="4u 12u(mobile)">
@@ -195,9 +195,9 @@ $nombreCategoria = current($dataCategoria)["nombre"];
 														<h3>Dolore nisl feugiat</h3>
 													</header>
 													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
+													<!--<footer>
 														<a href="#" class="button alt">Find out more</a>
-													</footer>
+													</footer>-->
 												</section>
 											</div>
 										</div>
