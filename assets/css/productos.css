@@ -1,0 +1,10 @@
+.filtro{
+	background-color: white;
+	margin-bottom: 1em;
+	padding: 1em;
+}
+
+.categoria{
+	margin-right: 2em;
+	display: inline-block;
+}

@@ -26,6 +26,7 @@
 	    private function __construct()
 	    {
 	        $this->_connection = new mysqli($this->_host, $this->_username,$this->_password, $this->_database);
+	        $this->_connection->set_charset("utf8");
 	        // Error handling
 	        if(mysqli_connect_error())
 	        {

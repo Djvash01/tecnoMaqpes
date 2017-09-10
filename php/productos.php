@@ -5,11 +5,15 @@ include_once "conexion.php";
 $conexion = Conexion::getInstance();
 
 $idCategoria = $_GET["categoria"];
+$idSubCategoria = $_GET["sub"];
 
 $categoria = $conexion->get_data("SELECT * FROM categorias WHERE id = $idCategoria");
 $dataCategoria = array_values($categoria)[2];
 
-$productos = $conexion->get_data("SELECT * FROM productos WHERE categoria = $idCategoria");
+$subCategoria = $conexion->get_data("SELECT * FROM subcategorias WHERE id = $idSubCategoria");
+$dataSubCategoria = array_values($subCategoria)[2];
+
+$productos = $conexion->get_data("SELECT * FROM productos WHERE categoria = $idCategoria AND subcategoria = $idSubCategoria");
 $dataProductos = array_values($productos)[2];
 
 $nombreCategoria = current($dataCategoria)["nombre"];
@@ -33,6 +37,7 @@ $nombreCategoria = current($dataCategoria)["nombre"];
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/productos.css" />
 		<link href="../images/favicon.png" rel="shortcut icon" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
@@ -51,24 +56,7 @@ $nombreCategoria = current($dataCategoria)["nombre"];
 								<ul>
 									<li><a href="../index.html">INICIO</a></li>
 									<li><a href="../quienessomos.html">QUIENES SOMOS</a></li>
-									<li class="current"><a href="#">PRODUCTOS</a>
-										<ul>
-											<li><a href="#">+ Hidraulicos</a>
-												<ul>
-													<li><a href="#">Bombas hidraulicas</a></li>
-													<li><a href="#">Motores de traslacion</a></li>
-													<li><a href="#">Rotores de traslacion</a></li>
-													<li><a href="#">Cilindros</a></li>
-													<li><a href="#">Mangueras</a></li>
-													<li><a href="#">Motores de giros</a></li>
-													<li><a href="#">Reductores de giros</a></li>
-												</ul>
-											</li>
-											<li><a href="#">Electronicos</a></li>
-											<li><a href="#">Mecanicos</a></li>
-											<li><a href="#">Aire acondicionado</a></li>
-										</ul>
-									</li>
+									<li class="current"><a href="#">PRODUCTOS</a></li>
 									<li><a href="../servicios.html">SERVICIOS</a></li>
 									<li><a href="../pedidos.html">PEDIDOS</a></li>
 								</ul>
@@ -82,25 +70,83 @@ $nombreCategoria = current($dataCategoria)["nombre"];
 
 					<div class="container">
 
-							<article class="box post">
-								<header>
-									<h3>
+							<div class="filtro">
+								<div class="categoria">
+									<span>Categoria: </span>
+									<select id="categoria" onchange="cargar()">
 										<?php
-											echo $nombreCategoria;
-										?>
-									</h3>
-								</header>
-							</article>
 
+											$categorias = $conexion->get_data("SELECT * FROM categorias ORDER BY nombre");
+											$dataCategorias = array_values($categorias)[2];
+
+											for($i=0; $i<count($dataCategorias); $i++)
+										    {
+										      	 $categoria = array_values($dataCategorias)[$i];
+										      	 $id = $categoria["id"];
+										      	 $nombre = $categoria["nombre"];
+
+										      	 $esActual = "";
+
+										      	 if($id == $idCategoria)
+										      	 {
+										      	 	$esActual = "selected";
+										      	 }
+
+										      	 echo '<option value="'.$id.'" '.$esActual.'>'.$nombre.'</option>';
+										    }
+
+								      	?>
+									</select>
+								</div>
+
+								<div class="categoria">
+									<span>Sub categoria: </span>
+									<select id="subcategoria" onchange="cargarSub()">
+										<?php
+
+											$subCategorias = $conexion->get_data("SELECT * FROM subcategorias WHERE categoria = $idCategoria ORDER BY nombre");
+											$dataSubCategorias = array_values($subCategorias)[2];
+
+											for($i=0; $i<count($dataSubCategorias); $i++)
+										    {
+										      	 $subCategoria = array_values($dataSubCategorias)[$i];
+										      	 $id = $subCategoria["id"];
+										      	 $nombre = $subCategoria["nombre"];
+
+										      	 $esActual = "";
+
+										      	 if($id == $idSubCategoria)
+										      	 {
+										      	 	$esActual = "selected";
+										      	 }
+
+										      	 echo '<option value="'.$id.'" '.$esActual.'>'.$nombre.'</option>';
+										    }
+
+								      	?>
+									</select>
+								</div>
+							</div>
 						<div class="row">
 							<div class="12u">
 
 								<!-- Portfolio -->
 									<section>
-										<div class="row">
 										<?php
+											$contador = 1;
+
+											if(count($dataProductos) == 0)
+											{
+												echo "<span>No se encontraron resultados para esta categoría.</span>";
+											}
+
 									      for($i=0; $i<count($dataProductos); $i++)
 									      {
+								      		if($contador == 1)
+								      		{
+								      			echo '<div class="row">';
+								      		}
+
 									      	 $producto = array_values($dataProductos)[$i];
 									      	 $nombreImagen = $producto["ruta_imagen"];
 									      	 $nombreProducto = $producto["nombre"];
@@ -123,84 +169,15 @@ $nombreCategoria = current($dataCategoria)["nombre"];
 											</div>
 
 											<?php
+
+											$contador ++;
+
+								      		if($contador == 4){
+								      			echo '</div>';
+								      			$contador = 1;
+								      		}
 									      }
 										?>
-
-											<!--<div class="4u 12u(mobile)">
-												<section class="box">
-													<a href="#" class="image featured"><img src="../images/pic02.jpg" alt="" /></a>
-													<header>
-														<h3>Ipsum feugiat et dolor</h3>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
-											</div>
-											<div class="4u 12u(mobile)">
-												<section class="box">
-													<a href="#" class="image featured"><img src="../images/pic03.jpg" alt="" /></a>
-													<header>
-														<h3>Sed etiam lorem nulla</h3>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
-											</div>
-											<div class="4u 12u(mobile)">
-												<section class="box">
-													<a href="#" class="image featured"><img src="../images/pic04.jpg" alt="" /></a>
-													<header>
-														<h3>Consequat et tempus</h3>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
-											</div>-->
-										</div>
-										<div class="row">
-											<div class="4u 12u(mobile)">
-												<section class="box">
-													<a href="#" class="image featured"><img src="../images/pic05.jpg" alt="" /></a>
-													<header>
-														<h3>Blandit sed adipiscing</h3>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<!--<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>-->
-												</section>
-											</div>
-											<div class="4u 12u(mobile)">
-												<section class="box">
-													<a href="#" class="image featured"><img src="../images/pic06.jpg" alt="" /></a>
-													<header>
-														<h3>Etiam nisl consequat</h3>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<!--<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>-->
-												</section>
-											</div>
-											<div class="4u 12u(mobile)">
-												<section class="box">
-													<a href="#" class="image featured"><img src="../images/pic07.jpg" alt="" /></a>
-													<header>
-														<h3>Dolore nisl feugiat</h3>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<!--<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>-->
-												</section>
-											</div>
-										</div>
 									</section>
 
 							</div>
@@ -265,13 +242,14 @@ $nombreCategoria = current($dataCategoria)["nombre"];
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/skel-viewport.min.js"></script>
-			<script src="assets/js/util.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.dropotron.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/skel-viewport.min.js"></script>
+			<script src="../assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script src="../assets/js/tecnomaqpes.js"></script>
 
 	</body>
 </html>
