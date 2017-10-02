@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-09-2017 a las 21:59:05
+-- Tiempo de generación: 02-10-2017 a las 03:37:15
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -61,11 +61,24 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `categoria`, `subcategoria`, `nombre`, `descripcion`, `ruta_imagen`) VALUES
-(1, 1, 2, 'Bomba de prueba', 'Es una bomba de alta capacidad y resistencia', 'pic02.jpg'),
-(2, 1, 2, 'Bomba de baja capacidad', 'Es una bomba especial para espacios reducidos', 'pic03.jpg'),
-(3, 2, 1, 'Refrigerante para circuitos', 'refrigerante para evitar el calor en los chipset', 'pic04.jpg'),
-(4, 1, 2, 'OTRO PRODUCTO', '', 'pic03.jpg'),
-(5, 1, 2, 'OTRO PRODUCTO MAS', '', 'pic03.jpg');
+(1, 1, 2, 'BOMBAS  KAWASAKI', 'Bombas KAWASAKI  K3V 112 DT  para diversas  excavadoras', 'pic02.jpg'),
+(6, 1, 2, 'BOMBAS PILOTO', 'BOMBAS PILOTO', 'pic02.jpg'),
+(7, 1, 2, 'MOTORREDUCTORES DE TRANSLACIÓN ', 'MOTORREDUCTORES DE TRANSLACIÓN ', 'pic02.jpg'),
+(8, 1, 2, 'MOTORREDUCTORES DE GIRO', 'MOTORREDUCTORES DE GIRO', 'pic02.jpg'),
+(9, 1, 2, 'BANCOS DE VÁLVULAS', 'BANCOS DE VÁLVULAS', 'pic02.jpg'),
+(10, 1, 2, 'PEDALES Y MANDOS', 'PEDALES Y MANDOS', 'pic02.jpg'),
+(11, 1, 2, 'ACTUADORES O CILINDROS HIDRÁULICOS ', 'ACTUADORES O CILINDROS HIDRÁULICOS ', 'pic02.jpg'),
+(12, 1, 2, 'VÁLVULAS DE ALIVIO Y PRINCIPALES', 'VÁLVULAS DE ALIVIO Y PRINCIPALES', 'pic02.jpg'),
+(13, 1, 2, 'MANGUERAS, TUBOS, RACORES Y CHEQUES', 'MANGUERAS, TUBOS, RACORES Y CHEQUES', 'pic02.jpg'),
+(14, 1, 2, 'EMPAQUETADURAS Y SELLOS EN GENERAL', 'EMPAQUETADURAS Y SELLOS EN GENERAL', 'pic02.jpg'),
+(15, 1, 2, 'EMPAQUETADURAS Y SELLOS EN GENERAL', 'EMPAQUETADURAS Y SELLOS EN GENERAL', 'pic02.jpg'),
+(16, 1, 2, 'FILTROS. PILOTOS DE LÍNEA , RETORNO Y SUCCIÓN', 'FILTROS. PILOTOS DE LÍNEA , RETORNO Y SUCCIÓN', 'pic02.jpg'),
+(17, 1, 2, 'MANÓMETROS DE ALTA Y BAJA PRESIÓN ', 'MANÓMETROS DE ALTA Y BAJA PRESIÓN ', 'pic02.jpg'),
+(18, 1, 2, 'REGULADORES Y ENFRIADORES DE ACEITE', 'REGULADORES Y ENFRIADORES DE ACEITE', 'pic02.jpg'),
+(19, 2, 2, 'CABLES Y FUSIBLES', 'Cables en diferentes calibres, fusibles, bombillos, lamparas, terminales, probadores electrónicos y análogos , cintas dieléctricas, horometros digitales y análogos, reloj de revoluciones de motor, switches,pulsadores, contactores.', 'pic03.jpg'),
+(20, 2, 2, 'MOTORES DE ARRANQUE', 'Motores de arranque de 12 y 24 voltios ', 'pic03.jpg'),
+(21, 2, 2, 'ALTERNADORES', 'Alternadores de 12 y 24 V', 'pic02.jpg'),
+(22, 2, 2, 'CARGADORES DE BATERÍAS', 'CARGADORES DE BATERÍAS', 'pic02.jpg');
 
 -- --------------------------------------------------------
 
@@ -148,7 +161,7 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT de la tabla `subcategorias`
 --
