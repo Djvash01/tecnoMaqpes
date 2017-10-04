@@ -58,7 +58,7 @@ $nombreCategoria = current($dataCategoria)["nombre"];
 									<li><a href="../quienessomos.html">QUIENES SOMOS</a></li>
 									<li class="current"><a href="#">PRODUCTOS</a></li>
 									<li><a href="../servicios.html">SERVICIOS</a></li>
-									<li><a href="../pedidos.html">PEDIDOS</a></li>
+									<li><a href="../contacto.html">CONTACTO</a></li>
 								</ul>
 							</nav>
 						
