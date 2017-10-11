@@ -53,7 +53,7 @@ $nombreCategoria = current($dataCategoria)["nombre"];
 									<li><a href="../index.html">INICIO</a></li>
 									<li><a href="../quienessomos.html">QUIENES SOMOS</a></li>
 									<li class="current"><a href="#">PRODUCTOS</a></li>
-									<li><a href="../servicios.html">SERVICIOS</a></li>
+									<!--<li><a href="../servicios.html">SERVICIOS</a></li>-->
 									<li><a href="../contacto.html">CONTACTO</a></li>
 								</ul>
 							</nav>
@@ -125,7 +125,7 @@ $nombreCategoria = current($dataCategoria)["nombre"];
 									      	 ?>
 									      	 <div class="4u 12u(mobile)">
 												<section class="box">
-													<a href="#" class="image featured"><img src="../images/productos/<?php echo $nombreImagen; ?>" alt="" /></a>
+													<a class="image featured"><img src="../images/productos/<?php echo $nombreImagen; ?>" alt="" /></a>
 													<header>
 														<h3><?php echo $nombreProducto; ?></h3>
 													</header>
