@@ -5,15 +5,11 @@ include_once "conexion.php";
 $conexion = Conexion::getInstance();
 
 $idCategoria = $_GET["categoria"];
-$idSubCategoria = $_GET["sub"];
 
 $categoria = $conexion->get_data("SELECT * FROM categorias WHERE id = $idCategoria");
 $dataCategoria = array_values($categoria)[2];
 
-$subCategoria = $conexion->get_data("SELECT * FROM subcategorias WHERE id = $idSubCategoria");
-$dataSubCategoria = array_values($subCategoria)[2];
-
-$productos = $conexion->get_data("SELECT * FROM productos WHERE categoria = $idCategoria AND subcategoria = $idSubCategoria");
+$productos = $conexion->get_data("SELECT * FROM productos WHERE categoria = $idCategoria");
 $dataProductos = array_values($productos)[2];
 
 $nombreCategoria = current($dataCategoria)["nombre"];
@@ -76,7 +72,7 @@ $nombreCategoria = current($dataCategoria)["nombre"];
 									<select id="categoria" onchange="cargar()">
 										<?php
 
-											$categorias = $conexion->get_data("SELECT * FROM categorias ORDER BY nombre");
+											$categorias = $conexion->get_data("SELECT * FROM categorias ORDER BY id");
 											$dataCategorias = array_values($categorias)[2];
 
 											for($i=0; $i<count($dataCategorias); $i++)
@@ -88,34 +84,6 @@ $nombreCategoria = current($dataCategoria)["nombre"];
 										      	 $esActual = "";
 
 										      	 if($id == $idCategoria)
-										      	 {
-										      	 	$esActual = "selected";
-										      	 }
-
-										      	 echo '<option value="'.$id.'" '.$esActual.'>'.$nombre.'</option>';
-										    }
-
-								      	?>
-									</select>
-								</div>
-
-								<div class="categoria">
-									<span>Sub categoria: </span>
-									<select id="subcategoria" onchange="cargarSub()">
-										<?php
-
-											$subCategorias = $conexion->get_data("SELECT * FROM subcategorias WHERE categoria = $idCategoria ORDER BY nombre");
-											$dataSubCategorias = array_values($subCategorias)[2];
-
-											for($i=0; $i<count($dataSubCategorias); $i++)
-										    {
-										      	 $subCategoria = array_values($dataSubCategorias)[$i];
-										      	 $id = $subCategoria["id"];
-										      	 $nombre = $subCategoria["nombre"];
-
-										      	 $esActual = "";
-
-										      	 if($id == $idSubCategoria)
 										      	 {
 										      	 	$esActual = "selected";
 										      	 }
