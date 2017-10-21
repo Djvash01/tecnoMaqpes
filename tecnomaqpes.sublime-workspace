@@ -76,37 +76,10 @@
 	"buffers":
 	[
 		{
-			"file": "php/enviarcorreo.php",
+			"file": "php/conexion.php",
 			"settings":
 			{
-				"buffer_size": 8630,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "contacto.html",
-			"settings":
-			{
-				"buffer_size": 4307,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "php/productos.php",
-			"settings":
-			{
-				"buffer_size": 7775,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "",
-			"settings":
-			{
-				"buffer_size": 0,
+				"buffer_size": 2040,
 				"line_ending": "Windows"
 			}
 		}
@@ -148,29 +121,26 @@
 	"expanded_folders":
 	[
 		"/C/wamp64/www/tecnomaqpes",
-		"/C/wamp64/www/tecnomaqpes/assets",
-		"/C/wamp64/www/tecnomaqpes/assets/css",
-		"/C/wamp64/www/tecnomaqpes/assets/js",
-		"/C/wamp64/www/tecnomaqpes/images",
 		"/C/wamp64/www/tecnomaqpes/php"
 	],
 	"file_history":
 	[
+		"/C/wamp64/www/tecnomaqpes/index.html",
+		"/C/wamp64/www/tecnomaqpes/db/tecnomaqpes.sql",
+		"/C/wamp64/www/tecnomaqpes/quienessomos.html",
+		"/C/wamp64/www/tecnomaqpes/servicios.html",
+		"/C/wamp64/www/tecnomaqpes/contacto.html",
+		"/C/wamp64/www/tecnomaqpes/php/productos.php",
 		"/C/wamp64/www/tecnomaqpes/assets/js/tecnomaqpes.js",
+		"/C/wamp64/www/tecnomaqpes/php/enviarcorreo.php",
 		"/C/wamp64/bin/apache/apache2.4.23/bin/php.ini",
 		"/C/Users/Andrés/Desktop/Mandala validación de correo/mandala/php/registrar.php",
 		"/C/Users/Andrés/Desktop/Mandala validación de correo/mandala/php/correo_confirmacion.php",
 		"/C/Users/Andrés/Desktop/Mandala validación de correo/mandala/php/validar.php",
 		"/C/wamp64/www/tecnomaqpes/assets/css/main.css",
 		"/C/wamp64/www/tecnomaqpes/php/conexion.php",
-		"/C/wamp64/www/tecnomaqpes/php/productos.php",
-		"/C/wamp64/www/tecnomaqpes/index.html",
 		"/C/wamp64/www/tecnomaqpes/assets/css/productos.css",
 		"/C/wamp64/www/tecnomaqpes/php/admin.php",
-		"/C/wamp64/www/tecnomaqpes/servicios.html",
-		"/C/wamp64/www/tecnomaqpes/quienessomos.html",
-		"/C/wamp64/www/tecnomaqpes/contacto.html",
-		"/C/wamp64/www/tecnomaqpes/php/enviarcorreo.php",
 		"/C/Users/Andrés/Desktop/Mandala validación de correo/mandala/php/conexion.php",
 		"/D/General/Proyectos/Top Secret/SIP 40 cobol/AAA40/MEN01.CBL",
 		"/C/Program Files (x86)/FastStone Capture/FSCaptureHelp.chm",
@@ -222,6 +192,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"sub",
+			"&sub",
 			"sendmail",
 			"button",
 			"header-wrapper",
@@ -247,45 +219,16 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "php/enviarcorreo.php",
-					"semi_transient": false,
+					"file": "php/conexion.php",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 8630,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2364,
-								2364
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 720.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "contacto.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4307,
+						"buffer_size": 2040,
 						"regions":
 						{
 						},
@@ -298,71 +241,14 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "php/productos.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7775,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1069.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
 					"type": "text"
 				}
 			]
